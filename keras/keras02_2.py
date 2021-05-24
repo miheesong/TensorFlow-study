@@ -13,11 +13,18 @@ x_predict = np.array([111,112,113])
 
 # 2. 모델구성
 model = Sequential()
-model.add(Dense(1, input_dim=1))    
+model.add(Dense(50, input_dim=1))
+model.add(Dense(20))
+model.add(Dense(30))
+model.add(Dense(150))
+model.add(Dense(80))
+model.add(Dense(50))
+model.add(Dense(1))
+  
 
 # 3. 컴파일, 훈련
 model.compile(loss='mse', optimizer='adam')
-model.fit(x_train, y_train, epochs=1, batch_size=1)
+model.fit(x_train, y_train, epochs=150, batch_size=1)
 
 # 4. 평가, 예측
 loss = model.evaluate(x_test, y_test, batch_size=1)
@@ -25,5 +32,3 @@ print('loss : ', loss)
 
 results = model.predict(x_predict)
 print('results : ', results)
-
-# 과제3 잘만들것!!! 제가한 결과는 ~~,~~,~~가 나왔습니다.

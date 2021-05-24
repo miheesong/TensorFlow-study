@@ -27,7 +27,3 @@ print("loss : ", loss)
 
 results = model.predict([9]) # 1차원 값이 들어가야 한다.
 print("results : ", results)
-
-
-# 과제0. 깃허브 만들기 keras 레파지토리
-# 과제1. 네이밍룰 알아오기

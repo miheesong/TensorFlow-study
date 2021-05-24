@@ -19,8 +19,6 @@ model.add(Dense(1))
 model.compile(loss='mse', optimizer='adam') #loss를 최적화 시키는것
 model.fit(x, y, epochs=40, batch_size=1) #몰아서 하면 빠르다. epochs 훈련 10번
 # 배치를 작게하면 성능이 좋다. 배치를 얼마로 잡아야하나는 개발자에게 달려있음.
-# 배치 사이즈 명시안하면 ??
-# mse????
 
 #4. 평가, 예측
 loss = model.evaluate(x,y) # 학습에 사용한 데이터를 평가에 쓸수없다.
@@ -30,9 +28,3 @@ results = model.predict([4])
 print('results : ', results)
 
 ## result가 잘안나오면 batch_size를 넣고, epochs 늘리고, node수 증가시킨다.
-
-
-# hw. 1. mse란 2.batch_size default값 3. 하이퍼파라미터 튠을 마구마구 해보고 어떨때 잘나오는지
-# 어떻게어떻게 해보고 어떻게 나왔는지 쓰고 느낀점
-
-# 과제 결과는 kingkeras@naver.com으로 제출
